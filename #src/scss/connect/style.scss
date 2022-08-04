@@ -1,0 +1,349 @@
+@import "mixins";
+
+//<ОБЩИЕ ПАРАМЕТРЫ>=======================
+body {
+	color: $mainColor;
+	background: $backgroundColor;
+	overflow-x: hidden;
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>=================
+
+//<ОБОЛОЧКА>=================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+//</ОБОЛОЧКА>==================
+
+//<ОСНОВНАЯ СЕТКА>===================
+._container {
+	max-width: $maxWidthContainer + px;
+	padding: 0 15px 0 15px;
+	margin: 0 auto;
+}
+//</ОСНОВНАЯ СЕТКА>==================
+
+//<ОСНОВНОЙ БЛОК>================
+
+._border {
+	border-bottom: 1px solid #f2f2f2;
+}
+.signUp {
+	&__container {
+		background: #f4f5fc;
+		display: flex;
+		@include adaptiv-value(padding-top, 60, 0, 1);
+		@include adaptiv-value(padding-bottom, 60, 0, 1);
+		@include adaptiv-value(padding-left, 67, 0, 1);
+		@include adaptiv-value(padding-right, 67, 0, 1);
+		@media (max-width: #{$md3 + px}) {
+			padding: 0;
+		}
+	}
+
+	&__title {
+		flex: 1 1 calc(137 / 665 * 100%);
+		background: #5a61ed;
+		transform: rotate(180deg);
+		padding: 22px 6px;
+		& h1 {
+			color: #ffffff;
+			font-family: "PTSans";
+			font-weight: 400;
+			font-size: 49px;
+			@include adaptiv-value(font-size, 49, 39, 1);
+			line-height: 63px;
+			letter-spacing: 0.5px;
+			writing-mode: vertical-lr;
+		}
+	}
+}
+
+.form-signUp {
+	position: relative;
+	flex: 1 1 calc(528 / 665 * 100%);
+	background: #ffffff;
+	overflow: hidden;
+	@include adaptiv-value(padding-top, 39, 10, 1);
+	@include adaptiv-value(padding-bottom, 33, 10, 1);
+	@include adaptiv-value(padding-left, 21, 5, 1);
+	@include adaptiv-value(padding-right, 24.8, 5, 1);
+	&__title {
+		font-weight: 400;
+		@include adaptiv-value(font-size, 22, 18, 1);
+		line-height: 26px;
+		letter-spacing: -0.46px;
+	}
+	&__header {
+		opacity: $opacity;
+		@include adaptiv-value(margin-bottom, 21, 5, 1);
+	}
+
+	&__text {
+		@include adaptiv-value(font-size, 14, 12, 1);
+		line-height: 16px;
+		font-weight: 300;
+	}
+
+	&__icon {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: end;
+		width: calc((336) / 528 * 100%);
+		height: calc((355) / 480 * 100%);
+		@media (max-width: #{$md4 + px}) {
+			bottom: -12%;
+		}
+	}
+	&__svg {
+		stroke-width: 1px;
+		stroke: #f2f2f2;
+		transition: fill 1s;
+	}
+}
+.input-signUp {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	@include adaptiv-value(gap, 15.2, 5, 1);
+	@include adaptiv-value(margin-bottom, 96, 10, 1);
+	z-index: 5;
+
+	&__box {
+		flex: 1 1 calc(50% - 4%);
+		opacity: $opacity;
+		@media (max-width: #{$md4 + px}) {
+			flex: 1 1 100%;
+		}
+
+		& input,
+		.select__header,
+		.radio-signUp {
+			width: 100%;
+			min-height: 28.2px;
+			line-height: 17px;
+			text-overflow: ellipsis;
+		}
+		& input {
+			outline: none;
+			background: none;
+			padding-right: 15px;
+		}
+	}
+	&__title {
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 14px;
+		color: #7c7c7c;
+		width: 100%;
+	}
+}
+.registered {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 50%;
+	left: calc(63.8 / 528 * 100%);
+	&__title {
+		font-size: 22px;
+		line-height: 26px;
+		font-weight: 500;
+		@include adaptiv-value(margin-bottom, 11, 5, 1);
+	}
+	&__text {
+		line-height: 16px;
+		font-weight: 300;
+	}
+}
+.validation {
+	position: relative;
+	width: 100%;
+	&__icons {
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	&__icon {
+		font-size: 8px;
+	}
+	&__text {
+		position: absolute;
+		left: 0;
+		top: 105%;
+		font-size: 8px;
+		line-height: 14px;
+		color: #ff2222;
+		display: none;
+	}
+}
+
+.dateOfBirth {
+	display: flex;
+	justify-content: space-between;
+	@include adaptiv-value(gap, 10, 3, 1);
+	& .validation:last-child {
+		flex: 0 1 calc(68 / 234 * 100%);
+	}
+	& .validation:nth-child(2) {
+		flex: 1 1 calc(91 / 234 * 100%);
+	}
+	& .validation:first-child {
+		flex: 0 1 calc(56 / 234 * 100%);
+	}
+}
+.radio-signUp {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	&__input {
+		position: absolute;
+		z-index: -1;
+		opacity: 0;
+		&:checked + label:before {
+			background: #5a61ed;
+		}
+	}
+	&__label {
+		position: relative;
+		cursor: pointer;
+		display: flex;
+		padding: 0 20px 0 17.5px;
+		line-height: 16px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 1px;
+			left: 0;
+			border: 3px solid #ffffff;
+			outline: 1px solid #5a61ed;
+			border-radius: 50%;
+			height: calc(1em - 2px);
+			width: calc(1em - 2px);
+		}
+	}
+}
+.submit-signUp {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+	min-height: 33px;
+	flex-wrap: wrap;
+	@media (max-width: 404px) {
+		justify-content: center;
+	}
+
+	&__animateBtn {
+		opacity: $opacity;
+	}
+
+	&__btn {
+		font-family: "PTSans";
+		background: #5a61ed;
+		line-height: 18px;
+		color: #ffffff;
+		height: 100%;
+		padding: 6px 27px 7px 25px;
+		transition: 0.3s;
+		margin: 0 -2px -2px 0;
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0px 5px 10px 0px hsla(0, 10%, 87%, 0.61);
+			}
+		}
+	}
+}
+
+// Дополнительные классы
+.login-signUp {
+	padding: 0 5px 5px 0;
+	&__text {
+		font-size: 13px;
+		line-height: 15px;
+		word-spacing: -2.2px;
+		& a {
+			text-decoration: none;
+			color: #5a61ed;
+		}
+	}
+}
+._valid-no {
+	color: #ff2222;
+	&._border {
+		border-bottom: none;
+		box-shadow: 0 2px 0 0 #ff2222;
+	}
+}
+
+// Анимация
+._animate-box {
+	animation: opacity 2s forwards;
+	visibility: visible;
+}
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+._animate-svg {
+	animation-name: pencil;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+}
+@keyframes pencil {
+	80% {
+		stroke-dashoffset: 0;
+	}
+	100% {
+		fill: #f9faff;
+		stroke: #f9faff;
+	}
+}
+// Shake тряска кнопки
+._shake {
+	animation: shake 0.6s linear infinite;
+}
+@keyframes shake {
+	35% {
+		transform: rotate(0) translate(0, 0);
+	}
+	40% {
+		transform: rotate(5deg) translate(0, -2px);
+	}
+	45% {
+		transform: rotate(-3deg) translate(0, -2px);
+	}
+	50% {
+		transform: rotate(5deg) translate(0, -2px);
+	}
+	55% {
+		transform: rotate(-3deg) translate(0, -2px);
+	}
+	60% {
+		transform: rotate(5deg) translate(0, -2px);
+	}
+	65% {
+		transform: rotate(-3deg) translate(0, -2px);
+	}
+	70% {
+		transform: rotate(0) translate(0, 0);
+	}
+}
+// </Анимация>
+//</ОСНОВНОЙ БЛОК>================;;

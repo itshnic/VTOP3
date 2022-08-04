@@ -1,0 +1,469 @@
+body {
+  color: #111111;
+  background: #f2f2f2;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: 800px;
+  padding: 0 15px 0 15px;
+  margin: 0 auto;
+}
+
+._border {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.signUp__container {
+  background: #f4f5fc;
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 67px;
+  padding-right: 67px;
+}
+@media (max-width: 800px) {
+  .signUp__container {
+    padding-top: calc(
+				0px + 60 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+@media (max-width: 800px) {
+  .signUp__container {
+    padding-bottom: calc(
+				0px + 60 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+@media (max-width: 800px) {
+  .signUp__container {
+    padding-left: calc(
+				0px + 67 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+@media (max-width: 800px) {
+  .signUp__container {
+    padding-right: calc(
+				0px + 67 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+@media (max-width: 767.98px) {
+  .signUp__container {
+    padding: 0;
+  }
+}
+.signUp__title {
+  flex: 1 1 20.6015037594%;
+  background: #5a61ed;
+  transform: rotate(180deg);
+  padding: 22px 6px;
+}
+.signUp__title h1 {
+  color: #ffffff;
+  font-family: "PTSans";
+  font-weight: 400;
+  font-size: 49px;
+  font-size: 49px;
+  line-height: 63px;
+  letter-spacing: 0.5px;
+  writing-mode: vertical-lr;
+}
+@media (max-width: 800px) {
+  .signUp__title h1 {
+    font-size: calc(
+				39px + 10 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+
+.form-signUp {
+  position: relative;
+  flex: 1 1 79.3984962406%;
+  background: #ffffff;
+  overflow: hidden;
+  padding-top: 39px;
+  padding-bottom: 33px;
+  padding-left: 21px;
+  padding-right: 24.8px;
+}
+@media (max-width: 800px) {
+  .form-signUp {
+    padding-top: calc(
+				10px + 29 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+@media (max-width: 800px) {
+  .form-signUp {
+    padding-bottom: calc(
+				10px + 23 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+@media (max-width: 800px) {
+  .form-signUp {
+    padding-left: calc(
+				5px + 16 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+@media (max-width: 800px) {
+  .form-signUp {
+    padding-right: calc(
+				5px + 19.8 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+.form-signUp__title {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.46px;
+}
+@media (max-width: 800px) {
+  .form-signUp__title {
+    font-size: calc(
+				18px + 4 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+.form-signUp__header {
+  opacity: 0;
+  margin-bottom: 21px;
+}
+@media (max-width: 800px) {
+  .form-signUp__header {
+    margin-bottom: calc(
+				5px + 16 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+.form-signUp__text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 300;
+}
+@media (max-width: 800px) {
+  .form-signUp__text {
+    font-size: calc(
+				12px + 2 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+.form-signUp__icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: end;
+  width: 63.6363636364%;
+  height: 73.9583333333%;
+}
+@media (max-width: 479.98px) {
+  .form-signUp__icon {
+    bottom: -12%;
+  }
+}
+.form-signUp__svg {
+  stroke-width: 1px;
+  stroke: #f2f2f2;
+  transition: fill 1s;
+}
+
+.input-signUp {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15.2px;
+  margin-bottom: 96px;
+  z-index: 5;
+}
+@media (max-width: 800px) {
+  .input-signUp {
+    gap: calc(
+				5px + 10.2 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+@media (max-width: 800px) {
+  .input-signUp {
+    margin-bottom: calc(
+				10px + 86 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+.input-signUp__box {
+  flex: 1 1 46%;
+  opacity: 0;
+}
+@media (max-width: 479.98px) {
+  .input-signUp__box {
+    flex: 1 1 100%;
+  }
+}
+.input-signUp__box input,
+.input-signUp__box .select__header,
+.input-signUp__box .radio-signUp {
+  width: 100%;
+  min-height: 28.2px;
+  line-height: 17px;
+  text-overflow: ellipsis;
+}
+.input-signUp__box input {
+  outline: none;
+  background: none;
+  padding-right: 15px;
+}
+.input-signUp__title {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #7c7c7c;
+  width: 100%;
+}
+
+.registered {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 12.0833333333%;
+}
+.registered__title {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+  margin-bottom: 11px;
+}
+@media (max-width: 800px) {
+  .registered__title {
+    margin-bottom: calc(
+				5px + 6 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+.registered__text {
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.validation {
+  position: relative;
+  width: 100%;
+}
+.validation__icons {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.validation__icon {
+  font-size: 8px;
+}
+.validation__text {
+  position: absolute;
+  left: 0;
+  top: 105%;
+  font-size: 8px;
+  line-height: 14px;
+  color: #ff2222;
+  display: none;
+}
+
+.dateOfBirth {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 800px) {
+  .dateOfBirth {
+    gap: calc(
+				3px + 7 *
+					((100vw - 320px) / 480)
+			);
+  }
+}
+.dateOfBirth .validation:last-child {
+  flex: 0 1 29.0598290598%;
+}
+.dateOfBirth .validation:nth-child(2) {
+  flex: 1 1 38.8888888889%;
+}
+.dateOfBirth .validation:first-child {
+  flex: 0 1 23.9316239316%;
+}
+
+.radio-signUp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.radio-signUp__input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radio-signUp__input:checked + label:before {
+  background: #5a61ed;
+}
+.radio-signUp__label {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  padding: 0 20px 0 17.5px;
+  line-height: 16px;
+}
+.radio-signUp__label::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  border: 3px solid #ffffff;
+  outline: 1px solid #5a61ed;
+  border-radius: 50%;
+  height: calc(1em - 2px);
+  width: calc(1em - 2px);
+}
+
+.submit-signUp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  min-height: 33px;
+  flex-wrap: wrap;
+}
+@media (max-width: 404px) {
+  .submit-signUp {
+    justify-content: center;
+  }
+}
+.submit-signUp__animateBtn {
+  opacity: 0;
+}
+.submit-signUp__btn {
+  font-family: "PTSans";
+  background: #5a61ed;
+  line-height: 18px;
+  color: #ffffff;
+  height: 100%;
+  padding: 6px 27px 7px 25px;
+  transition: 0.3s;
+  margin: 0 -2px -2px 0;
+}
+@media (any-hover: hover) {
+  .submit-signUp__btn:hover {
+    box-shadow: 0px 5px 10px 0px hsla(0deg, 10%, 87%, 0.61);
+  }
+}
+
+.login-signUp {
+  padding: 0 5px 5px 0;
+}
+.login-signUp__text {
+  font-size: 13px;
+  line-height: 15px;
+  word-spacing: -2.2px;
+}
+.login-signUp__text a {
+  text-decoration: none;
+  color: #5a61ed;
+}
+
+._valid-no {
+  color: #ff2222;
+}
+._valid-no._border {
+  border-bottom: none;
+  box-shadow: 0 2px 0 0 #ff2222;
+}
+
+._animate-box {
+  animation: opacity 2s forwards;
+  visibility: visible;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+._animate-svg {
+  animation-name: pencil;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pencil {
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #f9faff;
+    stroke: #f9faff;
+  }
+}
+._shake {
+  animation: shake 0.6s linear infinite;
+}
+
+@keyframes shake {
+  35% {
+    transform: rotate(0) translate(0, 0);
+  }
+  40% {
+    transform: rotate(5deg) translate(0, -2px);
+  }
+  45% {
+    transform: rotate(-3deg) translate(0, -2px);
+  }
+  50% {
+    transform: rotate(5deg) translate(0, -2px);
+  }
+  55% {
+    transform: rotate(-3deg) translate(0, -2px);
+  }
+  60% {
+    transform: rotate(5deg) translate(0, -2px);
+  }
+  65% {
+    transform: rotate(-3deg) translate(0, -2px);
+  }
+  70% {
+    transform: rotate(0) translate(0, 0);
+  }
+}
