@@ -109,8 +109,8 @@ body {
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
-	@include adaptiv-value(gap, 15.2, 10, 1);
-	@include adaptiv-value(margin-bottom, 96, 10, 1);
+	gap: 15.2px;
+	@include adaptiv-value(margin-bottom, 96, 20, 1);
 	z-index: 5;
 
 	&__box {
@@ -281,7 +281,7 @@ body {
 	color: #ff2222;
 	&._border {
 		border-bottom: none;
-		box-shadow: 0 2px 0 0 #ff2222;
+		box-shadow: 0 3px 0 -1px #ff2222;
 	}
 }
 

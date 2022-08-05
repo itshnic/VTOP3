@@ -202,16 +202,8 @@ body {
 }
 @media (max-width: 800px) {
   .input-signUp {
-    gap: calc(
-				10px + 5.2 *
-					((100vw - 320px) / 480)
-			);
-  }
-}
-@media (max-width: 800px) {
-  .input-signUp {
     margin-bottom: calc(
-				10px + 86 *
+				20px + 76 *
 					((100vw - 320px) / 480)
 			);
   }
@@ -403,7 +395,7 @@ body {
 }
 ._valid-no._border {
   border-bottom: none;
-  box-shadow: 0 2px 0 0 #ff2222;
+  box-shadow: 0 3px 0 -1px #ff2222;
 }
 
 ._animate-box {
