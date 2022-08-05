@@ -369,8 +369,8 @@ body {
 ._animate-svg {
   -webkit-animation-name: pencil;
           animation-name: pencil;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-delay: 0s;
@@ -579,7 +579,7 @@ body {
 
   .input-signUp {
     gap: calc(
-				5px + 10.2 *
+				10px + 5.2 *
 					((100vw - 320px) / 480)
 			);
   }

@@ -203,7 +203,7 @@ body {
 @media (max-width: 800px) {
   .input-signUp {
     gap: calc(
-				5px + 10.2 *
+				10px + 5.2 *
 					((100vw - 320px) / 480)
 			);
   }
@@ -421,7 +421,7 @@ body {
 }
 ._animate-svg {
   animation-name: pencil;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: 1;
   animation-delay: 0s;
   animation-fill-mode: forwards;
